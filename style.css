@@ -1,0 +1,21 @@
+h2{
+    color: rgb(5, 25, 135);
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+.productDiv{
+    margin-left: 32%;
+}
+.productDiv > div> input{
+    width: 420px;
+    padding: 8px;
+    margin: 10px 20px;
+}
+#submitButton {
+    width: 448px;
+    padding: 8px;
+    margin: 10px 0px;
+    margin-left: 15px;
+}
+

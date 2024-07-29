@@ -1,10 +1,17 @@
 body {
   background-color: rgb(2, 2, 29);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+:root{
+    --blueColor:blue;
 }
 h2 {
   text-align: center;
   font-size: 38px;
-  color: darkblue;
+  color: var(--blueColor);
 }
 #message {
   color: red;
@@ -89,21 +96,26 @@ h2 {
   margin-left: 112px;
   border-radius: 15px;
 }
-ul > li {
+
+
+header > ul > li {
     list-style-type: none;
     list-style-position: inside;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
-a {
+header > ul > li  > a {
   color: white;
   text-align: center;
   font-size: 20px;
   text-decoration: none;
-
+  background-color: rgba(76, 4, 80, 0.517);
+  padding: 4px;
 }
-
+header > ul > li > a:hover{
+    background-color: blue;
+}
 @media (max-width: 1200px) {
   .prodcuts {
     display: grid;

@@ -7,6 +7,7 @@ body {
 }
 :root{
     --blueColor:blue;
+    --modalBackroundColor:rgba(0, 0, 139, 0.39);
 }
 h2 {
   text-align: center;
@@ -29,7 +30,7 @@ h2 {
 }
 #product {
   border: 2px solid lime;
-  height: 350px;
+  height: 430px;
   width: 280px;
   border-radius: 28px;
   text-align: center;
@@ -44,10 +45,10 @@ h2 {
 }
 .showMoreButton {
   width: 130px;
-  padding: 6px;
+  padding: 10px;
   border: none;
   border-radius: 18px;
-  margin-top: -19px;
+  margin-top: 10px;
 }
 .showMoreButton:hover {
   background-color: darkblue;
@@ -62,23 +63,16 @@ h2 {
   border-top-right-radius: 25px;
 }
 
-.productDetails {
-  height: 450px;
-  width: 100%;
-  background-color: rgba(0, 0, 139, 0.41);
-  color: white;
-  margin: 50px 0px;
-}
+
 .productDetails {
   width: 60%;
   margin: auto;
-  margin-bottom: 58px;
   border-radius: 18px;
   text-align: center;
   font-size: 28px;
   height: auto;
   padding-bottom: 29px;
-  visibility: hidden;
+  color: white;
 }
 
 #productImage2 {
@@ -96,8 +90,7 @@ h2 {
   margin-left: 112px;
   border-radius: 15px;
 }
-
-
+a{border-right: 2px solid lime;}
 header > ul > li {
     list-style-type: none;
     list-style-position: inside;
@@ -111,11 +104,118 @@ header > ul > li  > a {
   font-size: 20px;
   text-decoration: none;
   background-color: rgba(76, 4, 80, 0.517);
-  padding: 4px;
+  padding: 4px 10px;
 }
 header > ul > li > a:hover{
     background-color: blue;
+    transition:background-color 1s;
 }
+.modal{
+  height: 600px;
+  width: 700px;
+  background-color: var(--modalBackroundColor);
+  border-radius: 25px;
+  padding-top: 150px;
+  margin: auto;
+  animation-name: modal;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.modal:hover{
+  animation-name: none;
+}
+@keyframes modal {
+  from{
+    transform: scale(0.8);
+  }to{
+    transform: scale(1);
+
+  }
+}
+#modalProduct{
+  height: 480px;
+  width: 400px;
+  margin: auto;
+  border: 3px solid rgba(0, 255, 0, 0.853);
+  border-radius: 20px;
+}
+
+#closeModal{
+  width: 210px;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 48px;
+  margin-left: 340px;
+  font-size: 18px;
+  color: green;
+}
+#closeModal:hover{background-color: darkblue; color: white; cursor: pointer;}
+.editAndDeleteButton{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 15px 8px;
+}
+.editAndDeleteButton > button{
+  width: 120px;
+  border-radius: 10px;
+  padding: 8px;
+  border: none;
+  background-color: cadetblue;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.editAndDeleteButton > button:hover{
+  background-color: rgb(215, 18, 87);
+  transition: background-color 1s;
+  cursor: pointer;
+}
+/* form style  */
+
+.formHeadText{
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+}
+.productDiv{
+  margin-left: 15%;
+  box-shadow:  4px  6px 6px 4px darkblue;
+  width: fit-content;
+  padding: 12px 3px;
+  border-radius: 7px;
+}
+.productDiv > div> input{
+  width: 420px;
+  padding: 8px;
+  margin: 10px 20px;
+  border-radius: 5px;
+  border: 3px solid darkblue;
+  font-size: 18px;
+}
+
+#submitButton {
+  width: 440px;
+  padding: 8px;
+  margin: 10px 0px;
+  margin-left: 6px;
+  border-radius: 5px;
+  border: 3px solid darkblue;
+  font-size: 18px;
+
+}
+#submitButton:hover{
+  background-color: green;
+  color: white;
+  transition:  background-color 1s;
+  cursor: pointer;
+}
+
+
+/* rwd  */
 @media (max-width: 1200px) {
   .prodcuts {
     display: grid;

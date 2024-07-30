@@ -48,7 +48,7 @@ h2 {
   padding: 10px;
   border: none;
   border-radius: 18px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .showMoreButton:hover {
   background-color: darkblue;
@@ -158,21 +158,18 @@ header > ul > li > a:hover{
   justify-content: space-between;
   margin: 15px 8px;
 }
-.editAndDeleteButton > button{
+.editAndDeleteButton > div{
   width: 120px;
   border-radius: 10px;
-  padding: 8px;
   border: none;
-  background-color: cadetblue;
   color: white;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
 }
-.editAndDeleteButton > button:hover{
-  background-color: rgb(215, 18, 87);
-  transition: background-color 1s;
+.editAndDeleteButton > div:hover{
   cursor: pointer;
 }
+
 /* form style  */
 
 .formHeadText{

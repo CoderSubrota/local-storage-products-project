@@ -32,8 +32,8 @@ getProducts.map((item) => {
         <p> Product price : $${item.productPrice}  </p>
         <p> Product brand : ${item.brandName}  </p>
       <div class="editAndDeleteButton">
-        <button onclick="editProduct(${item.productId})">Edit</button>
-        <button onclick="deleteProduct(${item.productId})">Delete</button>
+        <div onclick="editProduct(${item.productId})"><i class="fa-solid fa-pen-to-square" style="color:cyan;"></i></div>
+        <div onclick="deleteProduct(${item.productId})"><i class="fa-solid fa-trash" style="color:red;"></i></div>
       </div>
        <button onclick="productDetails(${item.productId})" class="showMoreButton">Show more</button> 
     </div>

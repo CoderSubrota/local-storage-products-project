@@ -1,6 +1,7 @@
 body{
     background-color: rgba(9, 9, 15, 0.945);
     color: white;
+    cursor: url("cursor.png"), auto;
 }
 h2{
     color: rgb(19, 154, 143);
@@ -8,6 +9,33 @@ h2{
     font-weight: bold;
     font-size: 40px;
 }
+
+
+  .form {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .form:hover {
+    transform: rotateX(10deg) rotateY(10deg) scale(1.1);
+    box-shadow: inset 4px 3px 4px 6px  rgba(4, 66, 99, 0.394);
+  }
+  
+  .form input, .form input {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form input:focus, .form input:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+
+
 .formHeadText{
     text-align: center;
     text-transform: uppercase;
@@ -16,10 +44,11 @@ h2{
 }
 .productDiv{
     margin-left: 32%;
-    box-shadow:  4px  6px 6px 4px darkblue;
+    box-shadow: inset 4px 3px 4px 6px  rgba(0, 0, 139, 0.394);
     width: fit-content;
     padding: 12px 3px;
     border-radius: 7px;
+    margin-bottom: 52px;
 }
 .productDiv > div> input{
     width: 420px;
@@ -64,8 +93,14 @@ header > ul > li  > a {
   padding: 4px 10px;
 }
 header > ul > li > a:hover{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.469);
     transition:background-color 1s;
 }
 
 a{border-right: 2px solid lime;}
+
+#navLink{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+}

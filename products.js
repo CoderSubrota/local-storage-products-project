@@ -54,7 +54,7 @@ function saveProduct(productId) {
     productPrice: productPrice,
     brandName: brandName,
     productImage: productImage,
-    productId: productId
+    productId: productId,
   };
   let filterData = getProducts.filter((item) => item.productId !== productId);
   localStorage.setItem("products", JSON.stringify([setProduct, ...filterData]));
@@ -62,15 +62,17 @@ function saveProduct(productId) {
 }
 
 //delete product
-function deleteProduct(productId){
-  let confirm = window.confirm("Are you want to delete your product ??") ;
-  if(confirm){
-  let filterProduct = getProducts.filter((item) => item.productId !== productId) ;
-  localStorage.setItem("products", JSON.stringify(filterProduct)) ;
-  window.location.reload() ;
-  alert("Your product deleted successfully !!") ;
-  }else{
-    alert("Your product is safe :)") ;
+function deleteProduct(productId) {
+  let confirm = window.confirm("Are you want to delete your product ??");
+  if (confirm) {
+    let filterProduct = getProducts.filter(
+      (item) => item.productId !== productId
+    );
+    localStorage.setItem("products", JSON.stringify(filterProduct));
+    window.location.reload();
+    alert("Your product deleted successfully !!");
+  } else {
+    alert("Your product is safe :)");
   }
 }
 
